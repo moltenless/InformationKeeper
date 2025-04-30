@@ -54,7 +54,7 @@
             this.ButtonAuthorization.Name = "ButtonAuthorization";
             this.ButtonAuthorization.Size = new System.Drawing.Size(248, 37);
             this.ButtonAuthorization.TabIndex = 0;
-            this.ButtonAuthorization.Text = "Авторизоваться";
+            this.ButtonAuthorization.Text = "Sign up";
             this.ButtonAuthorization.UseVisualStyleBackColor = true;
             this.ButtonAuthorization.Click += new System.EventHandler(this.ButtonAuthorization_Click);
             // 
@@ -64,9 +64,9 @@
             this.LabelLogin.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelLogin.Location = new System.Drawing.Point(-2, 173);
             this.LabelLogin.Name = "LabelLogin";
-            this.LabelLogin.Size = new System.Drawing.Size(103, 13);
+            this.LabelLogin.Size = new System.Drawing.Size(88, 13);
             this.LabelLogin.TabIndex = 1;
-            this.LabelLogin.Text = "Выполнить вход...";
+            this.LabelLogin.Text = "Sign in instead...";
             this.LabelLogin.Click += new System.EventHandler(this.LabelLogin_Click);
             this.LabelLogin.MouseEnter += new System.EventHandler(this.LabelAuthorization_MouseEnter);
             this.LabelLogin.MouseLeave += new System.EventHandler(this.LabelAuthorization_MouseLeave);
@@ -82,7 +82,7 @@
             this.TextBoxName.Size = new System.Drawing.Size(248, 23);
             this.TextBoxName.TabIndex = 3;
             this.TextBoxName.Tag = "Name";
-            this.TextBoxName.Text = "Ваше имя...";
+            this.TextBoxName.Text = "Enter your name...";
             this.TextBoxName.Enter += new System.EventHandler(this.TextBoxData_FocusEnter);
             this.TextBoxName.Leave += new System.EventHandler(this.TextBoxData_FocusLeave);
             // 
@@ -97,7 +97,7 @@
             this.TextBoxPassword.Size = new System.Drawing.Size(228, 23);
             this.TextBoxPassword.TabIndex = 4;
             this.TextBoxPassword.Tag = "Password";
-            this.TextBoxPassword.Text = "Пароль...";
+            this.TextBoxPassword.Text = "Password...";
             this.TextBoxPassword.Enter += new System.EventHandler(this.TextBoxData_FocusEnter);
             this.TextBoxPassword.Leave += new System.EventHandler(this.TextBoxData_FocusLeave);
             // 
@@ -109,7 +109,7 @@
             this.LabelDataIncorrect.Name = "LabelDataIncorrect";
             this.LabelDataIncorrect.Size = new System.Drawing.Size(246, 13);
             this.LabelDataIncorrect.TabIndex = 5;
-            this.LabelDataIncorrect.Text = "Неправильное имя или пароль!";
+            this.LabelDataIncorrect.Text = "Invalid name or password!";
             this.LabelDataIncorrect.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LabelDataIncorrect.Visible = false;
             // 
@@ -119,9 +119,9 @@
             this.LabelExit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelExit.Location = new System.Drawing.Point(-2, 186);
             this.LabelExit.Name = "LabelExit";
-            this.LabelExit.Size = new System.Drawing.Size(51, 13);
+            this.LabelExit.Size = new System.Drawing.Size(33, 13);
             this.LabelExit.TabIndex = 7;
-            this.LabelExit.Text = "Закрыть";
+            this.LabelExit.Text = "Close";
             this.LabelExit.Click += new System.EventHandler(this.LabelExit_Click);
             this.LabelExit.MouseEnter += new System.EventHandler(this.LabelAuthorization_MouseEnter);
             this.LabelExit.MouseLeave += new System.EventHandler(this.LabelAuthorization_MouseLeave);
@@ -164,7 +164,7 @@
             this.LabelObserv.Name = "LabelObserv";
             this.LabelObserv.Size = new System.Drawing.Size(49, 13);
             this.LabelObserv.TabIndex = 10;
-            this.LabelObserv.Text = "Обзор..";
+            this.LabelObserv.Text = "Choose..";
             this.LabelObserv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LabelObserv.Click += new System.EventHandler(this.LabelObserv_Click);
             // 
@@ -176,7 +176,7 @@
             this.LabelAvatar.Name = "LabelAvatar";
             this.LabelAvatar.Size = new System.Drawing.Size(61, 13);
             this.LabelAvatar.TabIndex = 9;
-            this.LabelAvatar.Text = "Аватарка:";
+            this.LabelAvatar.Text = "Avatar:";
             this.LabelAvatar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PictureBoxAvatar

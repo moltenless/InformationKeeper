@@ -29,51 +29,51 @@ namespace InformationKeeper
             Controls.RemoveByKey("add");
             Controls.RemoveByKey("remove");
 
-            AddTextBoxAndLabel("Название:", "name", false);
-            AddTextBoxAndLabel("Описание:", "description", true, DateTime.Now.ToString());
+            AddTextBoxAndLabel("Name:", "name", false);
+            AddTextBoxAndLabel("Description:", "description", true, DateTime.Now.ToString());
             switch ((string)(sender as CheckBox).Tag)
             {
                 case "account info":
-                    LabelDataType.Text = "Информация об уч. записи";
+                    LabelDataType.Text = "Account information";
                     for (int i = 1; ; i++)
-                        if (!InformationKeeper.DataExists(account, (d) => d.Name == "аккаунт" + i))
+                        if (!InformationKeeper.DataExists(account, (d) => d.Name == "account" + i))
                         {
-                            PanelInfo.Controls["name"].Text = "аккаунт" + i;
+                            PanelInfo.Controls["name"].Text = "account" + i;
                             break;
                         }
 
-                    AddTextBoxAndLabel("Имя:", "login", false);
-                    AddTextBoxAndLabel("Пароль:", "password", false);
-                    AddTextBoxAndLabel("E-mail:", "email", false);
-                    AddTextBoxAndLabel("Номер телефона:", "number", false);
+                    AddTextBoxAndLabel("Name:", "login", false);
+                    AddTextBoxAndLabel("Password:", "password", false);
+                    AddTextBoxAndLabel("Email:", "email", false);
+                    AddTextBoxAndLabel("Phone number:", "number", false);
                     break;
 
                 case "note":
-                    LabelDataType.Text = "Заметка";
+                    LabelDataType.Text = "Note";
                     for (int i = 1; ; i++)
-                        if (!InformationKeeper.DataExists(account, (d) => d.Name == "заметка" + i))
+                        if (!InformationKeeper.DataExists(account, (d) => d.Name == "Note" + i))
                         {
-                            PanelInfo.Controls["name"].Text = "заметка" + i;
+                            PanelInfo.Controls["name"].Text = "Note" + i;
                             break;
                         }
-                    AddTextBoxAndLabel("Содержание:", "content", true);
+                    AddTextBoxAndLabel("Content:", "content", true);
                     break;
 
                 case "album":
-                    LabelDataType.Text = "Фотоальбом";
+                    LabelDataType.Text = "Picture album";
                     for (int i = 1; ; i++)
-                        if (!InformationKeeper.DataExists(account, (d) => d.Name == "альбом" + i))
+                        if (!InformationKeeper.DataExists(account, (d) => d.Name == "album" + i))
                         {
-                            PanelInfo.Controls["name"].Text = "альбом" + i;
+                            PanelInfo.Controls["name"].Text = "album" + i;
                             break;
                         }
 
-                    Button buttonRemove = new Button { Name = "remove", Text = "Удал. изобр.", FlatStyle = FlatStyle.Flat, Enabled = false, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(PanelInfo.Controls["name"].Location.X + PanelInfo.Controls["name"].Width / 2 + 40, Height - 90), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
+                    Button buttonRemove = new Button { Name = "remove", Text = "Del. im.", FlatStyle = FlatStyle.Flat, Enabled = false, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(PanelInfo.Controls["name"].Location.X + PanelInfo.Controls["name"].Width / 2 + 40, Height - 90), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
                     PanelInfo.Controls["name"].SizeChanged += (sender2, e2) => { buttonRemove.Location = new Point(PanelInfo.Controls["name"].Location.X + PanelInfo.Controls["name"].Width / 2 + 40, Height - 90); };
                     buttonRemove.Click += RemovePictureBox_Click;
                     Controls.Add(buttonRemove);
 
-                    Button buttonAdd = new Button { Name = "add", Text = "Доб. изобр.", FlatStyle = FlatStyle.Flat, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(PanelInfo.Controls["name"].Location.X + PanelInfo.Controls["name"].Width / 2 + 130, Height - 90), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
+                    Button buttonAdd = new Button { Name = "add", Text = "Add. im.", FlatStyle = FlatStyle.Flat, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(PanelInfo.Controls["name"].Location.X + PanelInfo.Controls["name"].Width / 2 + 130, Height - 90), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
                     PanelInfo.Controls["name"].SizeChanged += (sender2, e2) => { buttonAdd.Location = new Point(PanelInfo.Controls["name"].Location.X + PanelInfo.Controls["name"].Width / 2 + 130, Height - 90); };
                     buttonAdd.Click += AddPictureBox_Click;
                     Controls.Add(buttonAdd);
@@ -85,7 +85,7 @@ namespace InformationKeeper
 
         void AddPictureBox_Click(object sender, EventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog { Title = "Выберите изображение", Filter = "Image Files (*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp" };
+            OpenFileDialog fileDialog = new OpenFileDialog { Title = "Choose an image", Filter = "Image Files (*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp" };
             fileDialog.ShowDialog();
 
             if (File.Exists(fileDialog.FileName))

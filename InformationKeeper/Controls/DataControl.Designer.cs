@@ -45,7 +45,7 @@ namespace InformationKeeper
             this.ButtonSave.Name = "ButtonSave";
             this.ButtonSave.Size = new System.Drawing.Size(81, 29);
             this.ButtonSave.TabIndex = 0;
-            this.ButtonSave.Text = "Сохранить";
+            this.ButtonSave.Text = "Save";
             this.ButtonSave.UseVisualStyleBackColor = true;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
@@ -58,7 +58,7 @@ namespace InformationKeeper
             this.ButtonRemove.Name = "ButtonRemove";
             this.ButtonRemove.Size = new System.Drawing.Size(81, 29);
             this.ButtonRemove.TabIndex = 1;
-            this.ButtonRemove.Text = "Удалить";
+            this.ButtonRemove.Text = "Delete";
             this.ButtonRemove.UseVisualStyleBackColor = true;
             this.ButtonRemove.Click += new System.EventHandler(this.ButtonRemove_Click);
             // 
@@ -69,9 +69,9 @@ namespace InformationKeeper
             this.LabelDataType.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelDataType.Location = new System.Drawing.Point(211, 26);
             this.LabelDataType.Name = "LabelDataType";
-            this.LabelDataType.Size = new System.Drawing.Size(114, 23);
+            this.LabelDataType.Size = new System.Drawing.Size(91, 23);
             this.LabelDataType.TabIndex = 2;
-            this.LabelDataType.Text = "Тип данных";
+            this.LabelDataType.Text = "Data type";
             // 
             // PanelInfo
             // 

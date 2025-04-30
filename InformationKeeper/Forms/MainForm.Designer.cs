@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.PanelList = new System.Windows.Forms.Panel();
+            this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.LabelTip = new System.Windows.Forms.Label();
             this.PictureBoxAdd = new System.Windows.Forms.PictureBox();
             this.LabelName = new System.Windows.Forms.Label();
             this.PictureBoxIncreaseDecrease = new System.Windows.Forms.PictureBox();
@@ -39,9 +41,8 @@
             this.PictureBoxEscape = new System.Windows.Forms.PictureBox();
             this.PanelData = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LabelTip = new System.Windows.Forms.Label();
-            this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.PanelList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxIncreaseDecrease)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRollUp)).BeginInit();
@@ -49,7 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEscape)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelList
@@ -65,6 +65,27 @@
             this.PanelList.Name = "PanelList";
             this.PanelList.Size = new System.Drawing.Size(248, 518);
             this.PanelList.TabIndex = 0;
+            // 
+            // PictureBoxLogo
+            // 
+            this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
+            this.PictureBoxLogo.Location = new System.Drawing.Point(17, 95);
+            this.PictureBoxLogo.Name = "PictureBoxLogo";
+            this.PictureBoxLogo.Size = new System.Drawing.Size(214, 259);
+            this.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxLogo.TabIndex = 1;
+            this.PictureBoxLogo.TabStop = false;
+            // 
+            // LabelTip
+            // 
+            this.LabelTip.AutoSize = true;
+            this.LabelTip.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelTip.Location = new System.Drawing.Point(52, 66);
+            this.LabelTip.Name = "LabelTip";
+            this.LabelTip.Size = new System.Drawing.Size(157, 26);
+            this.LabelTip.TabIndex = 0;
+            this.LabelTip.Text = "Titles will be shown\r\n here after information addition";
+            this.LabelTip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PictureBoxAdd
             // 
@@ -88,9 +109,9 @@
             this.LabelName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LabelName.Location = new System.Drawing.Point(44, 22);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(30, 13);
+            this.LabelName.Size = new System.Drawing.Size(39, 13);
             this.LabelName.TabIndex = 3;
-            this.LabelName.Text = "Имя";
+            this.LabelName.Text = "Name";
             // 
             // PictureBoxIncreaseDecrease
             // 
@@ -187,27 +208,6 @@
             this.panel1.Size = new System.Drawing.Size(248, 34);
             this.panel1.TabIndex = 8;
             // 
-            // LabelTip
-            // 
-            this.LabelTip.AutoSize = true;
-            this.LabelTip.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelTip.Location = new System.Drawing.Point(33, 66);
-            this.LabelTip.Name = "LabelTip";
-            this.LabelTip.Size = new System.Drawing.Size(184, 26);
-            this.LabelTip.TabIndex = 0;
-            this.LabelTip.Text = "Здесь будут показанны заголовки\r\nпосле добавления информации.";
-            this.LabelTip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PictureBoxLogo
-            // 
-            this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
-            this.PictureBoxLogo.Location = new System.Drawing.Point(17, 95);
-            this.PictureBoxLogo.Name = "PictureBoxLogo";
-            this.PictureBoxLogo.Size = new System.Drawing.Size(214, 259);
-            this.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBoxLogo.TabIndex = 1;
-            this.PictureBoxLogo.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +236,7 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
             this.PanelList.ResumeLayout(false);
             this.PanelList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxIncreaseDecrease)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRollUp)).EndInit();
@@ -243,7 +244,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEscape)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

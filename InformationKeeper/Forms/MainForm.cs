@@ -99,7 +99,7 @@ namespace InformationKeeper
 
         private void PictureBoxEscape_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Выйти?", "Выход:", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+            if (MessageBox.Show("Log out?", "Quit:", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
             {
                 Program.ShowLogin = Program.CycleEnabled = true;
                 if (File.Exists(InformationKeeper.InfoFileName))

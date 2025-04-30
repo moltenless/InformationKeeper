@@ -46,7 +46,7 @@
             this.ButtonSave.Name = "ButtonSave";
             this.ButtonSave.Size = new System.Drawing.Size(137, 40);
             this.ButtonSave.TabIndex = 1;
-            this.ButtonSave.Text = "Сохранить";
+            this.ButtonSave.Text = "Save";
             this.ButtonSave.UseVisualStyleBackColor = true;
             this.ButtonSave.Visible = false;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
@@ -59,10 +59,10 @@
             this.CheckBoxNote.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CheckBoxNote.Location = new System.Drawing.Point(21, 94);
             this.CheckBoxNote.Name = "CheckBoxNote";
-            this.CheckBoxNote.Size = new System.Drawing.Size(65, 17);
+            this.CheckBoxNote.Size = new System.Drawing.Size(46, 17);
             this.CheckBoxNote.TabIndex = 7;
             this.CheckBoxNote.Tag = "note";
-            this.CheckBoxNote.Text = "Заметка";
+            this.CheckBoxNote.Text = "Note";
             this.CheckBoxNote.UseVisualStyleBackColor = false;
             this.CheckBoxNote.Click += new System.EventHandler(this.ChangeCheckState_Click);
             // 
@@ -74,7 +74,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 16);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Выбирите шаблон:";
+            this.label1.Text = "Choose a template:";
             // 
             // CheckBoxAccountInfo
             // 
@@ -84,10 +84,10 @@
             this.CheckBoxAccountInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CheckBoxAccountInfo.Location = new System.Drawing.Point(21, 74);
             this.CheckBoxAccountInfo.Name = "CheckBoxAccountInfo";
-            this.CheckBoxAccountInfo.Size = new System.Drawing.Size(77, 17);
+            this.CheckBoxAccountInfo.Size = new System.Drawing.Size(119, 17);
             this.CheckBoxAccountInfo.TabIndex = 5;
             this.CheckBoxAccountInfo.Tag = "account info";
-            this.CheckBoxAccountInfo.Text = "Уч. запись";
+            this.CheckBoxAccountInfo.Text = "Account information";
             this.CheckBoxAccountInfo.UseVisualStyleBackColor = false;
             this.CheckBoxAccountInfo.Click += new System.EventHandler(this.ChangeCheckState_Click);
             // 
@@ -110,9 +110,9 @@
             this.LabelDataType.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelDataType.Location = new System.Drawing.Point(260, 14);
             this.LabelDataType.Name = "LabelDataType";
-            this.LabelDataType.Size = new System.Drawing.Size(80, 23);
+            this.LabelDataType.Size = new System.Drawing.Size(88, 23);
             this.LabelDataType.TabIndex = 18;
-            this.LabelDataType.Text = "Шаблон";
+            this.LabelDataType.Text = "Template";
             this.LabelDataType.Visible = false;
             // 
             // CheckBoxPhotoAlbum
@@ -123,10 +123,10 @@
             this.CheckBoxPhotoAlbum.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CheckBoxPhotoAlbum.Location = new System.Drawing.Point(21, 114);
             this.CheckBoxPhotoAlbum.Name = "CheckBoxPhotoAlbum";
-            this.CheckBoxPhotoAlbum.Size = new System.Drawing.Size(85, 17);
+            this.CheckBoxPhotoAlbum.Size = new System.Drawing.Size(87, 17);
             this.CheckBoxPhotoAlbum.TabIndex = 19;
             this.CheckBoxPhotoAlbum.Tag = "album";
-            this.CheckBoxPhotoAlbum.Text = "Фотоальбом";
+            this.CheckBoxPhotoAlbum.Text = "Picture album";
             this.CheckBoxPhotoAlbum.UseVisualStyleBackColor = false;
             this.CheckBoxPhotoAlbum.Click += new System.EventHandler(this.ChangeCheckState_Click);
             // 

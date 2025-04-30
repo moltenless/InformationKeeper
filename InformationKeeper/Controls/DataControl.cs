@@ -20,35 +20,35 @@ namespace InformationKeeper
             this.form = form;
             if (data is AccountInfo accountInfo)
             {
-                LabelDataType.Text = "Информация об уч. записи";
-                AddTextBoxAndLabel("Название:", "name", accountInfo.Name, false);
-                AddTextBoxAndLabel("Описание:", "description", accountInfo.Description, true);
-                AddTextBoxAndLabel("Имя:", "login", (string)accountInfo["login"], false);
-                AddTextBoxAndLabel("Пароль:", "password", (string)accountInfo["password"], false);
+                LabelDataType.Text = "Account information";
+                AddTextBoxAndLabel("Name:", "name", accountInfo.Name, false);
+                AddTextBoxAndLabel("Description:", "description", accountInfo.Description, true);
+                AddTextBoxAndLabel("Name:", "login", (string)accountInfo["login"], false);
+                AddTextBoxAndLabel("Password:", "password", (string)accountInfo["password"], false);
                 AddTextBoxAndLabel("E-mail:", "email", (string)accountInfo["email"], false);
-                AddTextBoxAndLabel("Номер телефона:", "number", (string)accountInfo["number"], false);
+                AddTextBoxAndLabel("Phone number:", "number", (string)accountInfo["number"], false);
             }
             else if (data is Note note)
             {
-                LabelDataType.Text = "Заметка";
-                AddTextBoxAndLabel("Название:", "name", note.Name, false);
-                AddTextBoxAndLabel("Описание:", "description", note.Description, true);
-                AddTextBoxAndLabel("Содердание:", "content", (string)note["content"], true);
+                LabelDataType.Text = "Note";
+                AddTextBoxAndLabel("Name:", "name", note.Name, false);
+                AddTextBoxAndLabel("Description:", "description", note.Description, true);
+                AddTextBoxAndLabel("Content:", "content", (string)note["content"], true);
             }
             else if (data is Album album)
             {
-                LabelDataType.Text = "Фотоальбом";
-                AddTextBoxAndLabel("Название:", "name", album.Name, false);
-                AddTextBoxAndLabel("Описание:", "description", album.Description, true);
+                LabelDataType.Text = "Picture album";
+                AddTextBoxAndLabel("Name:", "name", album.Name, false);
+                AddTextBoxAndLabel("Description:", "description", album.Description, true);
 
-                Button buttonRemove = new Button { Name = "remove", Text = "Удал. изобр.", FlatStyle = FlatStyle.Flat, Enabled = false, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(ButtonRemove.Location.X - 180, ButtonRemove.Location.Y), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
+                Button buttonRemove = new Button { Name = "remove", Text = "Del. im.", FlatStyle = FlatStyle.Flat, Enabled = false, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(ButtonRemove.Location.X - 180, ButtonRemove.Location.Y), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
                 buttonRemove.Click += RemovePictureBox_Click;
                 Controls.Add(buttonRemove);
 
-                Button buttonAdd = new Button { Name = "add", Text = "Доб. изобр.", FlatStyle = FlatStyle.Flat, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(ButtonRemove.Location.X - 90, ButtonRemove.Location.Y), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
+                Button buttonAdd = new Button { Name = "add", Text = "Add. im.", FlatStyle = FlatStyle.Flat, Font = new Font("Tahoma", 7, FontStyle.Regular), Location = new Point(ButtonRemove.Location.X - 90, ButtonRemove.Location.Y), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, Height = 25, Width = 85 };
                 buttonAdd.Click += (sender, e) => 
                 {
-                    OpenFileDialog fileDialog = new OpenFileDialog { Title = "Выберите изображение", Filter = "Image Files (*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp" };
+                    OpenFileDialog fileDialog = new OpenFileDialog { Title = "Choose image", Filter = "Image Files (*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp" };
                     fileDialog.ShowDialog();
                     if (File.Exists(fileDialog.FileName))
                         PanelInfo.ScrollControlIntoView(AddPictureBox(Image.FromFile(fileDialog.FileName)));

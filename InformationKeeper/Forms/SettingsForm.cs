@@ -54,14 +54,14 @@ namespace InformationKeeper
                 {
                     TextBoxPassword.Clear();
                     TextBoxPassword.Focus();
-                    LabelPassStepInfo.Text = "Новый пароль:";
+                    LabelPassStepInfo.Text = "New password:";
                     ButtonNextPassStep.Enabled = false;
                     changePassword = true;
                 }
                 else
                 {
                     LabelError.Visible = true;
-                    LabelError.Text = "Неверно указан старый пароль!";
+                    LabelError.Text = "Incorrect old password!";
                 }
         }
 
@@ -93,7 +93,7 @@ namespace InformationKeeper
             (bool, string) oldInfo = InformationKeeper.LoadInfo();
             InformationKeeper.SaveInfo(oldInfo.Item1, account.Name);
 
-            MessageBox.Show("Настройки сохранены!");
+            MessageBox.Show("Setting are updated!");
             Close();
         }
 
@@ -109,7 +109,7 @@ namespace InformationKeeper
 
         private void LabelRemove_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы действительно хототие удалить \nаккаунт и все его данные?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure about deleting \nthe account and all its data?", "Caution!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 InformationKeeper.RemoveAccount(account);
                 Program.ShowLogin = Program.CycleEnabled = true;
@@ -119,7 +119,7 @@ namespace InformationKeeper
 
         private void LabelGoOut_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Выйти?", "Выход:", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+            if (MessageBox.Show("Log out?", "Quit:", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
             {
                 Program.ShowLogin = Program.CycleEnabled = true;
                 if (File.Exists(InformationKeeper.InfoFileName))

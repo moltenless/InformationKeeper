@@ -78,9 +78,9 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(4, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 23);
+            this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Имя:";
+            this.label1.Text = "Name:";
             // 
             // ButtonSave
             // 
@@ -90,7 +90,7 @@
             this.ButtonSave.Name = "ButtonSave";
             this.ButtonSave.Size = new System.Drawing.Size(167, 36);
             this.ButtonSave.TabIndex = 10;
-            this.ButtonSave.Text = "Сохранить";
+            this.ButtonSave.Text = "Save changes";
             this.ButtonSave.UseVisualStyleBackColor = true;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
@@ -99,7 +99,7 @@
             this.TextBoxName.BackColor = System.Drawing.SystemColors.Control;
             this.TextBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextBoxName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBoxName.Location = new System.Drawing.Point(62, 172);
+            this.TextBoxName.Location = new System.Drawing.Point(67, 172);
             this.TextBoxName.Name = "TextBoxName";
             this.TextBoxName.Size = new System.Drawing.Size(100, 23);
             this.TextBoxName.TabIndex = 11;
@@ -110,9 +110,9 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(4, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 23);
+            this.label2.Size = new System.Drawing.Size(163, 23);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Смена пароля:";
+            this.label2.Text = "Password change:";
             // 
             // TextBoxPassword
             // 
@@ -131,9 +131,9 @@
             this.LabelPassStepInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelPassStepInfo.Location = new System.Drawing.Point(5, 236);
             this.LabelPassStepInfo.Name = "LabelPassStepInfo";
-            this.LabelPassStepInfo.Size = new System.Drawing.Size(89, 13);
+            this.LabelPassStepInfo.Size = new System.Drawing.Size(56, 13);
             this.LabelPassStepInfo.TabIndex = 14;
-            this.LabelPassStepInfo.Text = "Старый пароль:";
+            this.LabelPassStepInfo.Text = "Old value:";
             // 
             // ButtonNextPassStep
             // 
@@ -143,7 +143,7 @@
             this.ButtonNextPassStep.Name = "ButtonNextPassStep";
             this.ButtonNextPassStep.Size = new System.Drawing.Size(62, 24);
             this.ButtonNextPassStep.TabIndex = 15;
-            this.ButtonNextPassStep.Text = "Далее";
+            this.ButtonNextPassStep.Text = "Next";
             this.ButtonNextPassStep.UseVisualStyleBackColor = true;
             this.ButtonNextPassStep.Click += new System.EventHandler(this.ButtonNextPassStep_Click);
             // 
@@ -164,10 +164,10 @@
             this.LabelChooseAvatar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelChooseAvatar.Location = new System.Drawing.Point(458, 179);
             this.LabelChooseAvatar.Name = "LabelChooseAvatar";
-            this.LabelChooseAvatar.Size = new System.Drawing.Size(80, 13);
+            this.LabelChooseAvatar.Size = new System.Drawing.Size(58, 13);
             this.LabelChooseAvatar.TabIndex = 17;
             this.LabelChooseAvatar.Tag = "choose avatar";
-            this.LabelChooseAvatar.Text = "выбрать файл";
+            this.LabelChooseAvatar.Text = "choose file";
             this.LabelChooseAvatar.Click += new System.EventHandler(this.LabelChooseAvatar_Click);
             this.LabelChooseAvatar.MouseEnter += new System.EventHandler(this.Control_MouseEnter);
             this.LabelChooseAvatar.MouseLeave += new System.EventHandler(this.Control_MouseLeave);
@@ -176,11 +176,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(367, 172);
+            this.label4.Location = new System.Drawing.Point(382, 172);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 23);
+            this.label4.Size = new System.Drawing.Size(70, 23);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Аватарка:";
+            this.label4.Text = "Avatar:";
             // 
             // LabelRemove
             // 
@@ -189,10 +189,10 @@
             this.LabelRemove.ForeColor = System.Drawing.Color.Red;
             this.LabelRemove.Location = new System.Drawing.Point(442, 236);
             this.LabelRemove.Name = "LabelRemove";
-            this.LabelRemove.Size = new System.Drawing.Size(96, 13);
+            this.LabelRemove.Size = new System.Drawing.Size(98, 13);
             this.LabelRemove.TabIndex = 19;
             this.LabelRemove.Tag = "choose avatar";
-            this.LabelRemove.Text = "Удалить аккаунт";
+            this.LabelRemove.Text = "Delete the account";
             this.LabelRemove.Click += new System.EventHandler(this.LabelRemove_Click);
             // 
             // LabelGoOut
@@ -202,10 +202,10 @@
             this.LabelGoOut.ForeColor = System.Drawing.Color.Red;
             this.LabelGoOut.Location = new System.Drawing.Point(499, 218);
             this.LabelGoOut.Name = "LabelGoOut";
-            this.LabelGoOut.Size = new System.Drawing.Size(39, 13);
+            this.LabelGoOut.Size = new System.Drawing.Size(43, 13);
             this.LabelGoOut.TabIndex = 20;
             this.LabelGoOut.Tag = "choose avatar";
-            this.LabelGoOut.Text = "Выйти";
+            this.LabelGoOut.Text = "Log out";
             this.LabelGoOut.Click += new System.EventHandler(this.LabelGoOut_Click);
             // 
             // SettingsForm

@@ -14,20 +14,20 @@ namespace InformationKeeper
         }
 
         #region Front End Events
-        private void LabelAuthorization_MouseEnter(object sender, EventArgs e) => (sender as Label).ForeColor = (sender as Label).Text == "Закрыть" ? Color.Red : Color.LightSkyBlue;
+        private void LabelAuthorization_MouseEnter(object sender, EventArgs e) => (sender as Label).ForeColor = (sender as Label).Text == "Close" ? Color.Red : Color.LightSkyBlue;
         private void LabelAuthorization_MouseLeave(object sender, EventArgs e) => (sender as Label).ForeColor = SystemColors.ControlText;
 
         private void TextBoxData_FocusEnter(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             if ((string)textBox.Tag == "Name")
-                if (textBox.Text == "Ваше имя...")
+                if (textBox.Text == "Enter your name...")
                     textBox.Clear();
             if ((string)textBox.Tag == "Password")
             {
                 if ((string)PictureBoxEye.Tag == "close")
                     textBox.UseSystemPasswordChar = true;
-                if (textBox.Text == "Пароль...")
+                if (textBox.Text == "Password...")
                     textBox.Clear();
             }
         }
@@ -37,12 +37,12 @@ namespace InformationKeeper
             TextBox textBox = (TextBox)sender;
             if (textBox.Text == "")
                 if ((string)textBox.Tag == "Name")
-                    textBox.Text = "Ваше имя...";
+                    textBox.Text = "Enter your name...";
                 else
                 {
                     if ((string)PictureBoxEye.Tag == "open")
                         textBox.UseSystemPasswordChar = false;
-                    textBox.Text = "Пароль...";
+                    textBox.Text = "Password...";
                 }
         }
 
@@ -112,7 +112,7 @@ namespace InformationKeeper
             Account newAccount = new Account(name, pass, avatar);
             InformationKeeper.SaveAccount(newAccount);
 
-            MessageBox.Show($@"Аккаунт ""{newAccount.Name}"" успешно создан!", "Авторизация", MessageBoxButtons.OK);
+            MessageBox.Show($@"Account ""{newAccount.Name}"" has been successfully created!", "Authorization", MessageBoxButtons.OK);
 
             InformationKeeper.Current = newAccount;
 
@@ -123,7 +123,7 @@ namespace InformationKeeper
         private void LabelObserv_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Title = "Выберите изображение";
+            fileDialog.Title = "Choose an image for avatar";
             fileDialog.Filter = "Image Files (*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp";
             fileDialog.ShowDialog();
             if (File.Exists(fileDialog.FileName))
