@@ -1,4 +1,4 @@
-# 🔐 InformationKeeper - Encrypted Desktop Vault
+# 🔐 InformationKeeper (Screenshots are below)
 
 **Your personal, encrypted information manager. Store sensitive data like account credentials, private notes, or photo albums — all protected behind your own secure login.**
 
